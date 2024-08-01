@@ -9,12 +9,11 @@ SELECT pt.nome_tipo AS tipo_produto,
 	   el.estoque AS disponibilidade_estoque, 
 	   dt.nome_produto, 
 	   rp.descricao_recurso AS recurso, 
-       sa.tamanho        
-
+       	   sa.tamanho        
 FROM  DETALHES_PRODUTO dt
-JOIN ESTOQUE_LOJA el 	 		 ON dt.id_produto = el.id_produto 
-JOIN TIPOS_PRODUTO pt    	     ON dt.id_tipo = pt.id_tipo
-JOIN RECURSOS_PRODUTO rp 		 ON dt.id_produto = rp.id_produto
+JOIN ESTOQUE_LOJA el ON dt.id_produto = el.id_produto 
+JOIN TIPOS_PRODUTO pt ON dt.id_tipo = pt.id_tipo
+JOIN RECURSOS_PRODUTO rp ON dt.id_produto = rp.id_produto
 JOIN  DISPONIBILIDADE_TAMANHO sa ON dt.id_produto = sa.id_produto
 WHERE dt.id_tipo = 1  AND el.id_loja = 41  AND sa.id_tamanho = 2;  
 
