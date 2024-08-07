@@ -17,7 +17,6 @@ JOIN RECURSOS_PRODUTO rp ON dt.id_produto = rp.id_produto
 JOIN  DISPONIBILIDADE_TAMANHO sa ON dt.id_produto = sa.id_produto
 WHERE dt.id_tipo = 1  AND el.id_loja = 41  AND sa.id_tamanho = 2;  
 
-
 CREATE TABLE aulas.funcionarios2 (nome varchar(50),cargo varchar(50),idade int,presenca int ,salario int, avaliacao double) ;
 
 INSERT INTO aulas.funcionarios2 (nome, cargo, idade, presenca, salario, avaliacao) VALUES
